@@ -4,12 +4,13 @@ import string
 import time
 import ctypes
 import colorama
-
+# don't hate on the huge amount of unprofessionalness in this code, it was written off two hours of sleep. I'm sure you understand :)
 try: 
     from discord_webhook import DiscordWebhook 
 except ImportError:
     input(f"Module discord_webhook not installed, to install run '{'py -3' if os.name == 'nt' else 'python3.8'} -m pip install discord_webhook'\nPress enter to exit") 
-    exit() 
+    exit()
+    # looking for webhook
 try: 
     import requests 
 except ImportError: 
@@ -25,13 +26,13 @@ class NitroGen:
         os.system('cls' if os.name == 'nt' else 'clear') 
         if os.name == "nt": 
             print("")
-            ctypes.windll.kernel32.SetConsoleTitleW("nitro gen - made by wearish :)") 
+            ctypes.windll.kernel32.SetConsoleTitleW("nitro gen - made by sim-byte :)") 
         else:
-            print(f'\33]0;nitro gen - made by wearish\a', end='', flush=True) 
+            print(f'\33]0;nitro gen - made by sim-byte\a', end='', flush=True) 
 
-        print(""" nitro gen ig """) 
+        print(""" nitro generator """) 
         time.sleep(2) 
-        self.slowType("made by wearish", .02) 
+        self.slowType("made by sim-byte", .02) 
         time.sleep(1) 
         self.slowType("\n how many codes u wanna gen? : ", .02, newLine = False) 
 
@@ -53,7 +54,8 @@ class NitroGen:
                     k = 16
                 ))
 
-                url = f"https://discord.gift/{code}" 
+                url = f"https://discord.gift/{code}"  
+                # you can use this code as a token creator by removing "https://discord.gift/" and changing some code on the top
 
                 result = self.quickChecker(url, webhook)
 
@@ -65,10 +67,10 @@ class NitroGen:
                 print(f" Error | {url} ")
 
             if os.name == "nt": 
-                ctypes.windll.kernel32.SetConsoleTitleW(f"nitro gen / checker - {len(valid)} Valid | {invalid} Invalid - made by wearish") # Change the title
+                ctypes.windll.kernel32.SetConsoleTitleW(f"nitro gen / checker - {len(valid)} Valid | {invalid} Invalid - made by sim-byte") 
                 print("")
             else: 
-                print(f'\33]0;nitro gen - {len(valid)} Valid | {invalid} Invalid - made by wearish\a', end='', flush=True) # Change the title
+                print(f'\33]0;nitro gen - {len(valid)} Valid | {invalid} Invalid - made by sim-byte\a', end='', flush=True) 
 
         print(f"""
 Results:
@@ -124,7 +126,7 @@ Results:
                             url = notify,
                             content = f"holy shit it actually worked. (@everyone) \n{nitro}"
                         ).execute()
-                    else: # if there has not been a discord webhook setup just stop the code
+                    else: # if there hasn't been a discord webhook setup just stop the code
                         break 
 
                 else:
