@@ -4,7 +4,7 @@ import string
 import time
 import ctypes
 import colorama
-# don't hate on the huge amount of unprofessionalness in this code, it was written off two hours of sleep. I'm sure you understand :)
+# ! WARNING ! very unprofessional code up ahead, be weary 
 try: 
     from discord_webhook import DiscordWebhook 
 except ImportError:
@@ -34,11 +34,11 @@ class NitroGen:
         time.sleep(2) 
         self.slowType("made by sim-byte", .02) 
         time.sleep(1) 
-        self.slowType("\n how many codes u wanna gen? : ", .02, newLine = False) 
+        self.slowType("\n How many codes do you want to generate? : ", .02, newLine = False) 
 
         num = int(input('')) 
 
-        self.slowType("\n do u wanna to use a discord webhook? \n if u wanna, type it here or press enter to ignore: ", .02, newLine = False)
+        self.slowType("\n Do you want to impliment a discord web hook? \n if you would like to, type it here or press enter to ignore: ", .02, newLine = False)
         url = input('') 
         webhook = url if url != "" else None 
 
@@ -124,7 +124,7 @@ Results:
                     if notify is not None: 
                         DiscordWebhook( # sends message telling user there's a valid code
                             url = notify,
-                            content = f"holy shit it actually worked. (@everyone) \n{nitro}"
+                            content = f"Nitro Grabbed :). (@everyone) \n{nitro}"
                         ).execute()
                     else: # if there hasn't been a discord webhook setup just stop the code
                         break 
@@ -148,7 +148,7 @@ Results:
             if notify is not None: 
                 DiscordWebhook( 
                     url = notify,
-                    content = f"holy shit it actually worked.  (@everyone) \n{nitro}"
+                    content = f"Nitro Grabbed!.  (@everyone) \n{nitro}"
                 ).execute()
 
             return True 
