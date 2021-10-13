@@ -4,7 +4,7 @@ import string
 import time
 import ctypes
 import colorama
-# ! WARNING ! very unprofessional code up ahead, be weary 
+# ! PLEASE GIVE CREDIT ! -sim-byte#2120
 try: 
     from discord_webhook import DiscordWebhook 
 except ImportError:
