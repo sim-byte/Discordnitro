@@ -1,1 +1,3 @@
 " pip install discord_webhook "
+
+very simple to setup and use... 
