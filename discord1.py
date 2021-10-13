@@ -55,7 +55,7 @@ class NitroGen:
                 ))
 
                 url = f"https://discord.gift/{code}"  
-                # you can use this code as a token creator by removing "https://discord.gift/" and changing some code on the top
+                # able to be modified into token generator if needed 
 
                 result = self.quickChecker(url, webhook)
 
